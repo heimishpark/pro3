@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Desktop Café</title>
+  <link rel="stylesheet" href="style3.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+  <div class="mac-menubar">
+    <div class="left">
+      <span class="apple"></span>
+      <span>UrbanParlour</span>
+      <span>File</span>
+      <span>Edit</span>
+      <span>View</span>
+    </div>
+    <div class="right">
+      <button id="addCafeBtn">+ Add Cafe</button>
+    </div>
+  </div>
+
+  <!-- Initial cafe cards -->
+  <div class="cafe-card" data-name="클리프 서울" data-description="해방촌에서 가장 추천하는 루프탑 카페, 뷰 맛집" data-img="https://ifh.cc/g/WlaVS3.jpg" data-lat="37.5474137720015" data-lng="126.983935408044" data-keywords="#루프탑카페, #뷰맛집, #해방촌카페" style="top: 120px; left: 180px;">
+    <img src="https://ifh.cc/g/WlaVS3.jpg" alt="카페 이미지" draggable="false" />
+    <span class="filename">CLIFFSEOUL.JPG</span>
+  </div>
+
+  <div class="cafe-card" data-name="락떼스피릿" data-description="망원동 힙한카페, 라떼 맛집을 찾고 있다면 여기, 비엔나닐라 라는 시그니처 음료가 있는곳." data-img="https://ifh.cc/g/MNxT7j.jpg" data-lat="37.556189" data-lng="126.902014" data-keywords="#힙한카페, #망원동, #라떼맛집" style="top: 320px; left: 400px;">
+    <img src="https://ifh.cc/g/MNxT7j.jpg" alt="카페 이미지" draggable="false" />
+    <span class="filename">LATTE.JPG</span>
+  </div>
+
+  <!-- Info panel -->
+  <div class="info-panel" id="infoPanel">
+    <span class="close-btn" onclick="closePanel()">×</span>
+    <div class="info-content" id="infoContent"></div>
+  </div>
+
+  <!-- Add cafe form -->
+  <div class="add-cafe-form" id="addCafeForm">
+    <h3>Add New Cafe</h3>
+    <input type="text" placeholder="Cafe Name" id="cafeName" />
+    <input type="text" placeholder="Description" id="cafeDesc" />
+    <input type="text" placeholder="Image URL" id="cafeImg" />
+    <input type="text" placeholder="Cafe Address" id="cafeAddress" />
+    <button id="submitCafe">Submit</button>
+    <button id="cancelCafe">Cancel</button>
+  </div>
+
+  <script src="script3.js"></script>
+</body>
+</html>

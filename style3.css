@@ -68,10 +68,11 @@ body {
   }
   
   .info-content img {
-    max-width: 100%;
-    height: auto;
+    width:400px;
+    height: 500px;
     margin-bottom: 1rem;
     margin-top: 1.5rem;
+    align-items: center;
   }
   .mac-menubar {
     position: fixed;

@@ -41,18 +41,17 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 720px;
+    width: 650px;
     max-height: 80vh;
     transform: translate(-50%, -50%);
     background: white;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
     overflow-y: auto;
-    z-index: 9999;
-    display: none; /* 시작할 땐 숨김 */
+    z-index: 20000; /* ✅ 이 값을 10000보다 크게 설정 */
+    display: none;
     flex-direction: column;
   }
-  
   .popup-window.active {
     display: flex;
   }
@@ -154,7 +153,4 @@ body {
     transition: transform 0.1s ease; /* 선택적 부드러운 움직임 */
   }
   
- .h2{
-  font-family: sans-serif;
-  font-size: 2rem;
- }
+ 
